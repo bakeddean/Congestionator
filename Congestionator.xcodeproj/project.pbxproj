@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		052F77EE1AA0135F00F78F07 /* ExpandedImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052F77ED1AA0135F00F78F07 /* ExpandedImageViewController.swift */; };
 		055A0A9F1A9FEB9D009AF21D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055A0A9E1A9FEB9D009AF21D /* AppDelegate.swift */; };
 		055A0AA41A9FEB9D009AF21D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 055A0AA21A9FEB9D009AF21D /* Main.storyboard */; };
 		055A0AA61A9FEB9D009AF21D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 055A0AA51A9FEB9D009AF21D /* Images.xcassets */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		052F77ED1AA0135F00F78F07 /* ExpandedImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandedImageViewController.swift; sourceTree = "<group>"; };
 		055A0A991A9FEB9D009AF21D /* Congestionator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Congestionator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		055A0A9D1A9FEB9D009AF21D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		055A0A9E1A9FEB9D009AF21D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				055A0ABF1A9FEE1B009AF21D /* ViewController.swift */,
+				052F77ED1AA0135F00F78F07 /* ExpandedImageViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 				055A0AC01A9FEE1B009AF21D /* ViewController.swift in Sources */,
 				055A0ADB1A9FF00B009AF21D /* NetworkIndicator.swift in Sources */,
 				055A0A9F1A9FEB9D009AF21D /* AppDelegate.swift in Sources */,
+				052F77EE1AA0135F00F78F07 /* ExpandedImageViewController.swift in Sources */,
 				055A0ACB1A9FEEFA009AF21D /* BaseService.swift in Sources */,
 				055A0AE81A9FF2C4009AF21D /* BaseModel.swift in Sources */,
 				055A0ACC1A9FEEFA009AF21D /* ContentService.swift in Sources */,

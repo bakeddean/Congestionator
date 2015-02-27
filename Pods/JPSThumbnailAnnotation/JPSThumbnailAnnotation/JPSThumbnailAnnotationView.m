@@ -129,7 +129,8 @@ static CGFloat const kJPSThumbnailAnnotationViewAnimationDuration = 0.25f;
     self.subtitleLabel.text = thumbnail.subtitle;
     //self.imageView.image = thumbnail.image;
     NSURL *bob = [NSURL URLWithString:thumbnail.imageUrl];
-    [self.imageView sd_setImageWithURL:bob];
+    [self.imageView sd_setImageWithURL:bob placeholderImage:[UIImage imageNamed:@"Cat"] options:SDWebImageRefreshCached];
+    //[self.imageView sd_setImageWithURL:bob];
     self.disclosureBlock = thumbnail.disclosureBlock;
 }
 

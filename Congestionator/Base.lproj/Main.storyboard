@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AdV-LT-fGH">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
@@ -19,12 +20,25 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Zhk-ht-0Bw">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </mapView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SoO-Gf-9Zw">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="kbM-Zi-997"/>
+                                    <barButtonItem image="Refresh" id="dPm-dH-CLk"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="X4C-Or-lSR"/>
+                                    <barButtonItem image="Settings" id="9j3-Al-83x"/>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="ir5-w2-LTf"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="SoO-Gf-9Zw" secondAttribute="trailing" id="9Ja-ob-Zfi"/>
                             <constraint firstItem="Zhk-ht-0Bw" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="Azl-Gi-a9A"/>
                             <constraint firstItem="Zhk-ht-0Bw" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="J18-O3-brs"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="SoO-Gf-9Zw" secondAttribute="bottom" id="OWx-ya-38s"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Zhk-ht-0Bw" secondAttribute="bottom" id="UDj-Ad-ZCx"/>
+                            <constraint firstItem="SoO-Gf-9Zw" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Yjh-wx-gN4"/>
                             <constraint firstAttribute="trailing" secondItem="Zhk-ht-0Bw" secondAttribute="trailing" id="sMg-7w-ZIt"/>
                         </constraints>
                     </view>
@@ -36,6 +50,65 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1494" y="399"/>
+        </scene>
+        <!--Expanded Image View Controller-->
+        <scene sceneID="zgu-nr-rQ3">
+            <objects>
+                <viewController storyboardIdentifier="ExpandedImageViewController" id="61x-dv-9hH" customClass="ExpandedImageViewController" customModule="Congestionator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7Qa-xy-AxS"/>
+                        <viewControllerLayoutGuide type="bottom" id="ggL-hk-3PI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Fa0-NK-VEI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7gi-4S-8G3">
+                                <rect key="frame" x="0.0" y="64" width="600" height="492"/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BZc-Py-jYr">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="9VX-Vz-q2N"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="dIP-S5-jlh"/>
+                                    <barButtonItem image="Refresh" id="M6S-0Z-QBO">
+                                        <connections>
+                                            <action selector="refresh:" destination="61x-dv-9hH" id="hjl-du-zeA"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="E5X-sw-N2D"/>
+                                    <barButtonItem image="Settings" id="a69-SR-Pp1"/>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="D4q-4u-Etx"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BZc-Py-jYr" firstAttribute="leading" secondItem="Fa0-NK-VEI" secondAttribute="leading" id="26j-km-MOB"/>
+                            <constraint firstItem="ggL-hk-3PI" firstAttribute="top" secondItem="BZc-Py-jYr" secondAttribute="bottom" id="TXX-RF-nvm"/>
+                            <constraint firstAttribute="trailing" secondItem="7gi-4S-8G3" secondAttribute="trailing" id="Txf-ZT-dsS"/>
+                            <constraint firstItem="7gi-4S-8G3" firstAttribute="leading" secondItem="Fa0-NK-VEI" secondAttribute="leading" id="ZBh-Nv-gtt"/>
+                            <constraint firstItem="BZc-Py-jYr" firstAttribute="top" secondItem="7gi-4S-8G3" secondAttribute="bottom" id="bVH-yI-OdB"/>
+                            <constraint firstItem="7gi-4S-8G3" firstAttribute="top" secondItem="7Qa-xy-AxS" secondAttribute="bottom" id="chN-b5-eYP"/>
+                            <constraint firstAttribute="trailing" secondItem="BZc-Py-jYr" secondAttribute="trailing" id="duP-4Q-tv2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="0eD-BD-j6T">
+                        <barButtonItem key="rightBarButtonItem" image="Close" id="UOB-uq-RJz">
+                            <connections>
+                                <action selector="closeTapped:" destination="61x-dv-9hH" id="89G-UX-Fv9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="7gi-4S-8G3" id="TjC-zM-b4V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eT2-n9-R6l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3030" y="397"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NX2-s6-IUX">
@@ -55,5 +128,28 @@
             </objects>
             <point key="canvasLocation" x="616" y="399"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LRT-6a-ASa">
+            <objects>
+                <navigationController storyboardIdentifier="ImageNavigationController" automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="crossDissolve" id="6Xi-I5-rKN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BPq-XJ-UP6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="61x-dv-9hH" kind="relationship" relationship="rootViewController" id="bos-vd-dlb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="98Z-Fz-zev" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2218" y="397"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="Close" width="26" height="26"/>
+        <image name="Refresh" width="25" height="25"/>
+        <image name="Settings" width="26" height="26"/>
+    </resources>
 </document>

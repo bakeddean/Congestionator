@@ -46,6 +46,7 @@ class ViewController: UIViewController {
                     //thumbnail.subtitle = congestionLocation
                     thumbnail.coordinate = congestionLocation.coordinate
                     thumbnail.imageUrl = congestionLocation.imageUrl
+                    thumbnail.disclosureBlock = { self.loadImage(congestionLocation) }
                     self.mapView.addAnnotation(JPSThumbnailAnnotation(thumbnail: thumbnail))
                 }
             },
@@ -53,6 +54,13 @@ class ViewController: UIViewController {
                 //self.refreshControl.endRefreshing()
             }
         )
+    }
+    
+    func loadImage(congestionLocation: CongestionLocation) {
+        var navController = storyboard?.instantiateViewControllerWithIdentifier("ImageNavigationController") as UINavigationController
+        var expandedView = navController.childViewControllers.first! as ExpandedImageViewController
+        expandedView.setCongestionLocation(congestionLocation)
+        presentViewController(navController, animated: true, completion: nil)
     }
 }
 
