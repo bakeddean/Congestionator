@@ -13,7 +13,7 @@
 		055A0AA61A9FEB9D009AF21D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 055A0AA51A9FEB9D009AF21D /* Images.xcassets */; };
 		055A0AA91A9FEB9D009AF21D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 055A0AA71A9FEB9D009AF21D /* LaunchScreen.xib */; };
 		055A0AB51A9FEB9D009AF21D /* CongestionatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055A0AB41A9FEB9D009AF21D /* CongestionatorTests.swift */; };
-		055A0AC01A9FEE1B009AF21D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055A0ABF1A9FEE1B009AF21D /* ViewController.swift */; };
+		055A0AC01A9FEE1B009AF21D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055A0ABF1A9FEE1B009AF21D /* MapViewController.swift */; };
 		055A0ACB1A9FEEFA009AF21D /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055A0AC51A9FEEFA009AF21D /* BaseService.swift */; };
 		055A0ACC1A9FEEFA009AF21D /* ContentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055A0AC61A9FEEFA009AF21D /* ContentService.swift */; };
 		055A0ACE1A9FEEFA009AF21D /* RestKitObjC.m in Sources */ = {isa = PBXBuildFile; fileRef = 055A0AC91A9FEEFA009AF21D /* RestKitObjC.m */; };
@@ -52,7 +52,7 @@
 		055A0AAE1A9FEB9D009AF21D /* CongestionatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CongestionatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		055A0AB31A9FEB9D009AF21D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		055A0AB41A9FEB9D009AF21D /* CongestionatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongestionatorTests.swift; sourceTree = "<group>"; };
-		055A0ABF1A9FEE1B009AF21D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		055A0ABF1A9FEE1B009AF21D /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		055A0AC51A9FEEFA009AF21D /* BaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		055A0AC61A9FEEFA009AF21D /* ContentService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentService.swift; sourceTree = "<group>"; };
 		055A0AC81A9FEEFA009AF21D /* RestKitObjC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestKitObjC.h; sourceTree = "<group>"; };
@@ -160,7 +160,7 @@
 		055A0ABE1A9FEE01009AF21D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				055A0ABF1A9FEE1B009AF21D /* ViewController.swift */,
+				055A0ABF1A9FEE1B009AF21D /* MapViewController.swift */,
 				052F77ED1AA0135F00F78F07 /* ExpandedImageViewController.swift */,
 			);
 			path = ViewControllers;
@@ -379,7 +379,7 @@
 			files = (
 				055A0AE01A9FF00B009AF21D /* UIViewExtension.swift in Sources */,
 				055A0ACE1A9FEEFA009AF21D /* RestKitObjC.m in Sources */,
-				055A0AC01A9FEE1B009AF21D /* ViewController.swift in Sources */,
+				055A0AC01A9FEE1B009AF21D /* MapViewController.swift in Sources */,
 				055A0ADB1A9FF00B009AF21D /* NetworkIndicator.swift in Sources */,
 				055A0A9F1A9FEB9D009AF21D /* AppDelegate.swift in Sources */,
 				052F77EE1AA0135F00F78F07 /* ExpandedImageViewController.swift in Sources */,

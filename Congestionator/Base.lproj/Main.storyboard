@@ -8,7 +8,7 @@
         <!--Congestionator-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Congestionator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="MapViewController" customModule="Congestionator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -44,7 +44,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Congestionator" id="Ona-hP-07q"/>
                     <connections>
-                        <outlet property="mapView" destination="Zhk-ht-0Bw" id="xqH-4R-gy9"/>
+                        <outlet property="mapView" destination="Zhk-ht-0Bw" id="mDc-DN-x7v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

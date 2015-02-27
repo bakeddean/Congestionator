@@ -9,13 +9,17 @@
 import UIKit
 import MapKit
 
-class ViewController: UIViewController {
+class MapViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
+    private var congestionLocations = [CongestionLocation]()
+    
+    // MARK: - View Controller Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        mapView.showsUserLocation = true
         mapView.delegate = self
         loadCongestionLocations()
     }
@@ -25,35 +29,38 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    // MARK: - Post data
+    // MARK: - Congestion Location data
     
     func loadCongestionLocations() {
         ContentService.sharedInstance.getCongestionLocations(
             success: {(congestionLocations) -> () in
-                //self.refreshControl.endRefreshing()
+                self.congestionLocations = congestionLocations
                 
-//                self.posts = posts + self.posts
-//                var indexPaths = [NSIndexPath]()
-//                for index in 0..<posts.count {
-//                    let indexPath = NSIndexPath(forRow: index, inSection: 0)
-//                    indexPaths.append(NSIndexPath(forRow: index, inSection: 0))
-//                }
-//                self.collectionView?.insertItemsAtIndexPaths(indexPaths)
                 for congestionLocation in congestionLocations {
                     var thumbnail = JPSThumbnail()
                     thumbnail.image = UIImage(named: "Cat")
                     thumbnail.title = congestionLocation.name
-                    //thumbnail.subtitle = congestionLocation
                     thumbnail.coordinate = congestionLocation.coordinate
                     thumbnail.imageUrl = congestionLocation.imageUrl
                     thumbnail.disclosureBlock = { self.loadImage(congestionLocation) }
                     self.mapView.addAnnotation(JPSThumbnailAnnotation(thumbnail: thumbnail))
                 }
+                
+                self.mapView.setVisibleMapRect(self.mapRectForCongestionLocations(congestionLocations), edgePadding: UIEdgeInsetsMake(74, 10, 50, 10), animated: true)
+
             },
             failure: {(errorResponse, operation) -> () in
                 //self.refreshControl.endRefreshing()
             }
         )
+    }
+    
+    func mapRectForCongestionLocations(congestionLocations: [CongestionLocation]) -> MKMapRect {
+        let rectToDisplay = congestionLocations.reduce(MKMapRectNull) { (mapRect: MKMapRect, congestionLocation: CongestionLocation) -> MKMapRect in
+            let collectorPointRect = MKMapRect(origin: congestionLocation.mapPoint, size: MKMapSize(width: 0, height: 0))
+            return MKMapRectUnion(mapRect, collectorPointRect)
+        }
+        return rectToDisplay
     }
     
     func loadImage(congestionLocation: CongestionLocation) {
@@ -64,7 +71,9 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: MKMapViewDelegate {
+// MARK: - MKMapViewDelegate
+
+extension MapViewController: MKMapViewDelegate {
 
     func mapView(mapView: MKMapView!, didSelectAnnotationView view: MKAnnotationView!) {
         if view is JPSThumbnailAnnotationView {
@@ -80,12 +89,8 @@ extension ViewController: MKMapViewDelegate {
 
     func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
         if annotation is JPSThumbnailAnnotation {
-            var annotationView = (annotation as JPSThumbnailAnnotation).annotationViewInMap(mapView)
-            var annotationView2 = annotationView as JPSThumbnailAnnotationView
-            //annotationView 2.imageView.image = sd
-//            let bob = annotation as JPSThumbnailAnnotation
-//            let jim = bob.a
-//            annotationView2.imageView.sd_setImageWithURL(NSURL(string: (annotation as JPSThumbnailAnnotation).imageUrl))
+            //var annotationView = (annotation as JPSThumbnailAnnotation).annotationViewInMap(mapView)
+            //var annotationView2 = annotationView as JPSThumbnailAnnotationView
             return (annotation as JPSThumbnailAnnotation).annotationViewInMap(mapView)
         }
         return nil
