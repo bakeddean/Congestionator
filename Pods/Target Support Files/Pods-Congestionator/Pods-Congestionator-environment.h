@@ -18,6 +18,12 @@
 #define COCOAPODS_VERSION_MINOR_ISO8601DateFormatterValueTransformer 6
 #define COCOAPODS_VERSION_PATCH_ISO8601DateFormatterValueTransformer 0
 
+// JPSThumbnailAnnotation
+#define COCOAPODS_POD_AVAILABLE_JPSThumbnailAnnotation
+#define COCOAPODS_VERSION_MAJOR_JPSThumbnailAnnotation 1
+#define COCOAPODS_VERSION_MINOR_JPSThumbnailAnnotation 0
+#define COCOAPODS_VERSION_PATCH_JPSThumbnailAnnotation 0
+
 // RKValueTransformers
 #define COCOAPODS_POD_AVAILABLE_RKValueTransformers
 #define COCOAPODS_VERSION_MAJOR_RKValueTransformers 1
@@ -59,6 +65,18 @@
 #define COCOAPODS_VERSION_MAJOR_RestKit_Support 0
 #define COCOAPODS_VERSION_MINOR_RestKit_Support 23
 #define COCOAPODS_VERSION_PATCH_RestKit_Support 3
+
+// SDWebImage
+#define COCOAPODS_POD_AVAILABLE_SDWebImage
+#define COCOAPODS_VERSION_MAJOR_SDWebImage 3
+#define COCOAPODS_VERSION_MINOR_SDWebImage 7
+#define COCOAPODS_VERSION_PATCH_SDWebImage 1
+
+// SDWebImage/Core
+#define COCOAPODS_POD_AVAILABLE_SDWebImage_Core
+#define COCOAPODS_VERSION_MAJOR_SDWebImage_Core 3
+#define COCOAPODS_VERSION_MINOR_SDWebImage_Core 7
+#define COCOAPODS_VERSION_PATCH_SDWebImage_Core 1
 
 // SOCKit
 #define COCOAPODS_POD_AVAILABLE_SOCKit

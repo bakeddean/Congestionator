@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Congestionator-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Congestionator" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,13 +16,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Zhk-ht-0Bw">
-                                <rect key="frame" x="-94" y="-114" width="694" height="719"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Zhk-ht-0Bw">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Zhk-ht-0Bw" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="Azl-Gi-a9A"/>
+                            <constraint firstItem="Zhk-ht-0Bw" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="J18-O3-brs"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Zhk-ht-0Bw" secondAttribute="bottom" id="UDj-Ad-ZCx"/>
+                            <constraint firstAttribute="trailing" secondItem="Zhk-ht-0Bw" secondAttribute="trailing" id="sMg-7w-ZIt"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Ona-hP-07q"/>
+                    <navigationItem key="navigationItem" title="Congestionator" id="Ona-hP-07q"/>
+                    <connections>
+                        <outlet property="mapView" destination="Zhk-ht-0Bw" id="xqH-4R-gy9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

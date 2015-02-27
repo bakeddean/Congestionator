@@ -7,14 +7,16 @@
 //
 
 import UIKit
+import MapKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var mapView: MKMapView!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        mapView.delegate = self
         loadCongestionLocations()
     }
 
@@ -37,14 +39,50 @@ class ViewController: UIViewController {
 //                    indexPaths.append(NSIndexPath(forRow: index, inSection: 0))
 //                }
 //                self.collectionView?.insertItemsAtIndexPaths(indexPaths)
+                for congestionLocation in congestionLocations {
+                    var thumbnail = JPSThumbnail()
+                    thumbnail.image = UIImage(named: "Cat")
+                    thumbnail.title = congestionLocation.name
+                    //thumbnail.subtitle = congestionLocation
+                    thumbnail.coordinate = congestionLocation.coordinate
+                    thumbnail.imageUrl = congestionLocation.imageUrl
+                    self.mapView.addAnnotation(JPSThumbnailAnnotation(thumbnail: thumbnail))
+                }
             },
             failure: {(errorResponse, operation) -> () in
                 //self.refreshControl.endRefreshing()
             }
         )
     }
+}
 
+extension ViewController: MKMapViewDelegate {
 
+    func mapView(mapView: MKMapView!, didSelectAnnotationView view: MKAnnotationView!) {
+        if view is JPSThumbnailAnnotationView {
+            (view as JPSThumbnailAnnotationView).didSelectAnnotationViewInMap(mapView)
+        }
+    }
+    
+    func mapView(mapView: MKMapView!, didDeselectAnnotationView view: MKAnnotationView!) {
+        if view is JPSThumbnailAnnotationView {
+            (view as JPSThumbnailAnnotationView).didDeselectAnnotationViewInMap(mapView)
+        }
+    }
+
+    func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
+        if annotation is JPSThumbnailAnnotation {
+            var annotationView = (annotation as JPSThumbnailAnnotation).annotationViewInMap(mapView)
+            var annotationView2 = annotationView as JPSThumbnailAnnotationView
+            //annotationView 2.imageView.image = sd
+//            let bob = annotation as JPSThumbnailAnnotation
+//            let jim = bob.a
+//            annotationView2.imageView.sd_setImageWithURL(NSURL(string: (annotation as JPSThumbnailAnnotation).imageUrl))
+            return (annotation as JPSThumbnailAnnotation).annotationViewInMap(mapView)
+        }
+        return nil
+    }
+    
 
 }
 

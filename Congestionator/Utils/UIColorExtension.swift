@@ -19,4 +19,12 @@ extension UIColor {
         return rGBAHelper(83.0, 82.0, 77.0, 1.0)
     }
     
+    class func themeGreenColor() -> UIColor {
+        return rGBAHelper(26.0, 188.0, 156.0, 1.0)
+    }
+    
+    class func themeBlueColor() -> UIColor {
+        return rGBAHelper(52.0, 152.0, 219.0, 1.0)
+    }
+    
 }

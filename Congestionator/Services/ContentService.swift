@@ -29,7 +29,7 @@ class ContentService: BaseService {
     
     private func configureCongestionLocationList() {
         let congestionLocationListMapping = RKObjectMapping(forClass: CongestionLocation.self)
-        congestionLocationListMapping.addAttributeMappingsFromArray(["id", "imageUrl", "lat", "lon", "region"])
+        congestionLocationListMapping.addAttributeMappingsFromArray(["id", "imageUrl", "lat", "lon", "region", "name"])
         
         let responseDescriptor = RKResponseDescriptor(mapping: congestionLocationListMapping, method: RKRequestMethod.GET, pathPattern: ServicesResourceURI.GetCameras, keyPath: nil, statusCodes: NSIndexSet(index: 200))
         RKObjectManager.sharedManager().addResponseDescriptor(responseDescriptor)

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import MapKit
 
 class CongestionLocation: BaseModel {
     var id: NSNumber?
@@ -14,7 +15,25 @@ class CongestionLocation: BaseModel {
     var lat: NSNumber?
     var lon: NSNumber?
     var region: String?
+    var name: String?
     //var thumbUrl: String?
+    
+    var mapPoint: MKMapPoint {
+        return MKMapPointForCoordinate(coordinateHelper())
+    }
+  
+    func pinColor() -> MKPinAnnotationColor  {
+        return MKPinAnnotationColor.Green
+    }
+    
+    func coordinateHelper() -> CLLocationCoordinate2D {
+        return CLLocationCoordinate2DMake(CLLocationDegrees(lat!),CLLocationDegrees(lon!))
+    }
+}
+
+extension CongestionLocation: MKAnnotation {
+  var coordinate: CLLocationCoordinate2D { return CLLocationCoordinate2DMake(CLLocationDegrees(lat!),CLLocationDegrees(lon!)) }
+  var title: String { return name! }
 }
 
 /*

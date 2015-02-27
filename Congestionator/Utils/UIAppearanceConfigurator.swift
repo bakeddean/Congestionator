@@ -13,7 +13,7 @@ class UIAppearanceConfigurator {
 
     class func configureUIApprearance() {        
         UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName: UIFont.boldSystemFontOfSize(17), NSForegroundColorAttributeName: UIColor.whiteColor()]
-        UINavigationBar.appearance().barTintColor = UIColor.themeDarkGreyColor()
+        UINavigationBar.appearance().barTintColor = UIColor.themeBlueColor()
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
     }
             

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>BaseURL</key>
-	<string>http://172.17.133.39:4000/</string>
+	<string>http://congestionator.herokuapp.com/</string>
 	<key>OrganisationID</key>
 	<string>1</string>
 	<key>RKStubData</key>

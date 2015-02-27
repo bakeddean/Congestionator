@@ -17,5 +17,9 @@
 #import <AFNetworking/AFNetworking.h>
 #import <RestKit/RestKit.h>
 #import "RestKitObjC.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+
+// Mapping
+#import <JPSThumbnailAnnotation/JPSThumbnailAnnotation.h>
 
 #endif
