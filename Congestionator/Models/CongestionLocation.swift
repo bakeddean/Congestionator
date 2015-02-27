@@ -16,7 +16,8 @@ class CongestionLocation: BaseModel {
     var lon: NSNumber?
     var region: String?
     var name: String?
-    //var thumbUrl: String?
+    
+    var storedImages = [UIImage]()
     
     var mapPoint: MKMapPoint {
         return MKMapPointForCoordinate(coordinateHelper())
@@ -35,15 +36,3 @@ extension CongestionLocation: MKAnnotation {
   var coordinate: CLLocationCoordinate2D { return CLLocationCoordinate2DMake(CLLocationDegrees(lat!),CLLocationDegrees(lon!)) }
   var title: String { return name! }
 }
-
-/*
-{
-"id": "233",
-"imageUrl": "http://www.trafficnz.info/camera/233.jpg",
-"lat": "-40.762458",
-"lon": "175.155501",
-"name": "Otaki",
-"offline": false,
-"region": "Wellington"
-},
-*/

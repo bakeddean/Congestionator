@@ -73,26 +73,37 @@
                                 </constraints>
                                 <items>
                                     <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="dIP-S5-jlh"/>
-                                    <barButtonItem image="Refresh" id="M6S-0Z-QBO">
+                                    <barButtonItem image="Refresh" id="HYx-sd-ZQf">
                                         <connections>
-                                            <action selector="refresh:" destination="61x-dv-9hH" id="hjl-du-zeA"/>
+                                            <action selector="refresh:" destination="61x-dv-9hH" id="hdq-Rj-sqf"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="E5X-sw-N2D"/>
-                                    <barButtonItem image="Settings" id="a69-SR-Pp1"/>
+                                    <barButtonItem image="Play" id="a69-SR-Pp1">
+                                        <connections>
+                                            <action selector="forwardTapped:" destination="61x-dv-9hH" id="RvY-HL-2Fz"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="D4q-4u-Etx"/>
                                 </items>
                             </toolbar>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7Kl-pL-gyF">
+                                <rect key="frame" x="16" y="534" width="568" height="2"/>
+                                <color key="progressTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="BZc-Py-jYr" firstAttribute="leading" secondItem="Fa0-NK-VEI" secondAttribute="leading" id="26j-km-MOB"/>
+                            <constraint firstItem="7Kl-pL-gyF" firstAttribute="leading" secondItem="Fa0-NK-VEI" secondAttribute="leading" constant="16" id="AYf-5K-RoN"/>
                             <constraint firstItem="ggL-hk-3PI" firstAttribute="top" secondItem="BZc-Py-jYr" secondAttribute="bottom" id="TXX-RF-nvm"/>
                             <constraint firstAttribute="trailing" secondItem="7gi-4S-8G3" secondAttribute="trailing" id="Txf-ZT-dsS"/>
+                            <constraint firstItem="BZc-Py-jYr" firstAttribute="top" secondItem="7Kl-pL-gyF" secondAttribute="bottom" constant="20" id="Wy6-Mv-4HC"/>
                             <constraint firstItem="7gi-4S-8G3" firstAttribute="leading" secondItem="Fa0-NK-VEI" secondAttribute="leading" id="ZBh-Nv-gtt"/>
                             <constraint firstItem="BZc-Py-jYr" firstAttribute="top" secondItem="7gi-4S-8G3" secondAttribute="bottom" id="bVH-yI-OdB"/>
                             <constraint firstItem="7gi-4S-8G3" firstAttribute="top" secondItem="7Qa-xy-AxS" secondAttribute="bottom" id="chN-b5-eYP"/>
                             <constraint firstAttribute="trailing" secondItem="BZc-Py-jYr" secondAttribute="trailing" id="duP-4Q-tv2"/>
+                            <constraint firstAttribute="trailing" secondItem="7Kl-pL-gyF" secondAttribute="trailing" constant="16" id="jEf-B2-adb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0eD-BD-j6T">
@@ -104,6 +115,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="7gi-4S-8G3" id="TjC-zM-b4V"/>
+                        <outlet property="progressView" destination="7Kl-pL-gyF" id="SET-Ts-7es"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eT2-n9-R6l" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -149,6 +161,7 @@
     </scenes>
     <resources>
         <image name="Close" width="26" height="26"/>
+        <image name="Play" width="21" height="25"/>
         <image name="Refresh" width="25" height="25"/>
         <image name="Settings" width="26" height="26"/>
     </resources>
