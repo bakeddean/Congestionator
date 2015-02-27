@@ -8,11 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		055A0A9F1A9FEB9D009AF21D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055A0A9E1A9FEB9D009AF21D /* AppDelegate.swift */; };
-		055A0AA11A9FEB9D009AF21D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055A0AA01A9FEB9D009AF21D /* ViewController.swift */; };
 		055A0AA41A9FEB9D009AF21D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 055A0AA21A9FEB9D009AF21D /* Main.storyboard */; };
 		055A0AA61A9FEB9D009AF21D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 055A0AA51A9FEB9D009AF21D /* Images.xcassets */; };
 		055A0AA91A9FEB9D009AF21D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 055A0AA71A9FEB9D009AF21D /* LaunchScreen.xib */; };
 		055A0AB51A9FEB9D009AF21D /* CongestionatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055A0AB41A9FEB9D009AF21D /* CongestionatorTests.swift */; };
+		055A0AC01A9FEE1B009AF21D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055A0ABF1A9FEE1B009AF21D /* ViewController.swift */; };
+		055A0ACB1A9FEEFA009AF21D /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055A0AC51A9FEEFA009AF21D /* BaseService.swift */; };
+		055A0ACC1A9FEEFA009AF21D /* ContentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055A0AC61A9FEEFA009AF21D /* ContentService.swift */; };
+		055A0ACE1A9FEEFA009AF21D /* RestKitObjC.m in Sources */ = {isa = PBXBuildFile; fileRef = 055A0AC91A9FEEFA009AF21D /* RestKitObjC.m */; };
+		055A0ACF1A9FEEFA009AF21D /* ServicesConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055A0ACA1A9FEEFA009AF21D /* ServicesConstants.swift */; };
+		055A0AD91A9FF00B009AF21D /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055A0AD11A9FF00B009AF21D /* Configuration.swift */; };
+		055A0ADB1A9FF00B009AF21D /* NetworkIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055A0AD31A9FF00B009AF21D /* NetworkIndicator.swift */; };
+		055A0ADC1A9FF00B009AF21D /* NSDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055A0AD41A9FF00B009AF21D /* NSDateExtension.swift */; };
+		055A0ADD1A9FF00B009AF21D /* UIAppearanceConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055A0AD51A9FF00B009AF21D /* UIAppearanceConfigurator.swift */; };
+		055A0ADE1A9FF00B009AF21D /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055A0AD61A9FF00B009AF21D /* UIColorExtension.swift */; };
+		055A0ADF1A9FF00B009AF21D /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055A0AD71A9FF00B009AF21D /* UIImageExtension.swift */; };
+		055A0AE01A9FF00B009AF21D /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055A0AD81A9FF00B009AF21D /* UIViewExtension.swift */; };
+		055A0AE31A9FF120009AF21D /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 055A0AE21A9FF120009AF21D /* Config.plist */; };
+		055A0AE51A9FF2AD009AF21D /* CongestionLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055A0AE41A9FF2AD009AF21D /* CongestionLocation.swift */; };
+		055A0AE81A9FF2C4009AF21D /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055A0AE71A9FF2C4009AF21D /* BaseModel.swift */; };
+		9E49F7F5C01845429A63029D /* libPods-Congestionator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FAD807FF6B4D6864EE29DB1 /* libPods-Congestionator.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +44,32 @@
 		055A0A991A9FEB9D009AF21D /* Congestionator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Congestionator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		055A0A9D1A9FEB9D009AF21D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		055A0A9E1A9FEB9D009AF21D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		055A0AA01A9FEB9D009AF21D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		055A0AA31A9FEB9D009AF21D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		055A0AA51A9FEB9D009AF21D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		055A0AA81A9FEB9D009AF21D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		055A0AAE1A9FEB9D009AF21D /* CongestionatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CongestionatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		055A0AB31A9FEB9D009AF21D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		055A0AB41A9FEB9D009AF21D /* CongestionatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongestionatorTests.swift; sourceTree = "<group>"; };
+		055A0ABF1A9FEE1B009AF21D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		055A0AC51A9FEEFA009AF21D /* BaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		055A0AC61A9FEEFA009AF21D /* ContentService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentService.swift; sourceTree = "<group>"; };
+		055A0AC81A9FEEFA009AF21D /* RestKitObjC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestKitObjC.h; sourceTree = "<group>"; };
+		055A0AC91A9FEEFA009AF21D /* RestKitObjC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestKitObjC.m; sourceTree = "<group>"; };
+		055A0ACA1A9FEEFA009AF21D /* ServicesConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesConstants.swift; sourceTree = "<group>"; };
+		055A0AD11A9FF00B009AF21D /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		055A0AD31A9FF00B009AF21D /* NetworkIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkIndicator.swift; sourceTree = "<group>"; };
+		055A0AD41A9FF00B009AF21D /* NSDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtension.swift; sourceTree = "<group>"; };
+		055A0AD51A9FF00B009AF21D /* UIAppearanceConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAppearanceConfigurator.swift; sourceTree = "<group>"; };
+		055A0AD61A9FF00B009AF21D /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		055A0AD71A9FF00B009AF21D /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		055A0AD81A9FF00B009AF21D /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		055A0AE11A9FF02B009AF21D /* BridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		055A0AE21A9FF120009AF21D /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
+		055A0AE41A9FF2AD009AF21D /* CongestionLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CongestionLocation.swift; sourceTree = "<group>"; };
+		055A0AE71A9FF2C4009AF21D /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		2FAD807FF6B4D6864EE29DB1 /* libPods-Congestionator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Congestionator.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D77AEBF504F099482E37A17 /* Pods-Congestionator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Congestionator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Congestionator/Pods-Congestionator.debug.xcconfig"; sourceTree = "<group>"; };
+		C1C49415A7FC49FA3D5DD1AA /* Pods-Congestionator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Congestionator.release.xcconfig"; path = "Pods/Target Support Files/Pods-Congestionator/Pods-Congestionator.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E49F7F5C01845429A63029D /* libPods-Congestionator.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +97,8 @@
 				055A0A9B1A9FEB9D009AF21D /* Congestionator */,
 				055A0AB11A9FEB9D009AF21D /* CongestionatorTests */,
 				055A0A9A1A9FEB9D009AF21D /* Products */,
+				A24FFDDA3BA45906F8DF9181 /* Pods */,
+				8B2AE8B6C09C3D0AABA07C16 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,8 +114,12 @@
 		055A0A9B1A9FEB9D009AF21D /* Congestionator */ = {
 			isa = PBXGroup;
 			children = (
+				055A0AD01A9FF00B009AF21D /* Utils */,
+				055A0AC31A9FEEF9009AF21D /* Services */,
+				055A0AC21A9FEE34009AF21D /* Views */,
+				055A0AC11A9FEE2D009AF21D /* Models */,
+				055A0ABE1A9FEE01009AF21D /* ViewControllers */,
 				055A0A9E1A9FEB9D009AF21D /* AppDelegate.swift */,
-				055A0AA01A9FEB9D009AF21D /* ViewController.swift */,
 				055A0AA21A9FEB9D009AF21D /* Main.storyboard */,
 				055A0AA51A9FEB9D009AF21D /* Images.xcassets */,
 				055A0AA71A9FEB9D009AF21D /* LaunchScreen.xib */,
@@ -90,6 +131,8 @@
 		055A0A9C1A9FEB9D009AF21D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				055A0AE21A9FF120009AF21D /* Config.plist */,
+				055A0AE11A9FF02B009AF21D /* BridgingHeader.h */,
 				055A0A9D1A9FEB9D009AF21D /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -112,6 +155,89 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		055A0ABE1A9FEE01009AF21D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				055A0ABF1A9FEE1B009AF21D /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		055A0AC11A9FEE2D009AF21D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				055A0AE61A9FF2C4009AF21D /* Base */,
+				055A0AE41A9FF2AD009AF21D /* CongestionLocation.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		055A0AC21A9FEE34009AF21D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		055A0AC31A9FEEF9009AF21D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				055A0AC41A9FEEFA009AF21D /* Base */,
+				055A0AC61A9FEEFA009AF21D /* ContentService.swift */,
+				055A0AC81A9FEEFA009AF21D /* RestKitObjC.h */,
+				055A0AC91A9FEEFA009AF21D /* RestKitObjC.m */,
+				055A0ACA1A9FEEFA009AF21D /* ServicesConstants.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		055A0AC41A9FEEFA009AF21D /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				055A0AC51A9FEEFA009AF21D /* BaseService.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		055A0AD01A9FF00B009AF21D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				055A0AD11A9FF00B009AF21D /* Configuration.swift */,
+				055A0AD31A9FF00B009AF21D /* NetworkIndicator.swift */,
+				055A0AD41A9FF00B009AF21D /* NSDateExtension.swift */,
+				055A0AD51A9FF00B009AF21D /* UIAppearanceConfigurator.swift */,
+				055A0AD61A9FF00B009AF21D /* UIColorExtension.swift */,
+				055A0AD71A9FF00B009AF21D /* UIImageExtension.swift */,
+				055A0AD81A9FF00B009AF21D /* UIViewExtension.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		055A0AE61A9FF2C4009AF21D /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				055A0AE71A9FF2C4009AF21D /* BaseModel.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		8B2AE8B6C09C3D0AABA07C16 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2FAD807FF6B4D6864EE29DB1 /* libPods-Congestionator.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A24FFDDA3BA45906F8DF9181 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7D77AEBF504F099482E37A17 /* Pods-Congestionator.debug.xcconfig */,
+				C1C49415A7FC49FA3D5DD1AA /* Pods-Congestionator.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +245,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 055A0AB81A9FEB9D009AF21D /* Build configuration list for PBXNativeTarget "Congestionator" */;
 			buildPhases = (
+				75C5AEA6805C09A02D89EDF9 /* Check Pods Manifest.lock */,
 				055A0A951A9FEB9D009AF21D /* Sources */,
 				055A0A961A9FEB9D009AF21D /* Frameworks */,
 				055A0A971A9FEB9D009AF21D /* Resources */,
+				1FBCE74B798111D590FC94C3 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -192,6 +320,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				055A0AE31A9FF120009AF21D /* Config.plist in Resources */,
 				055A0AA41A9FEB9D009AF21D /* Main.storyboard in Resources */,
 				055A0AA91A9FEB9D009AF21D /* LaunchScreen.xib in Resources */,
 				055A0AA61A9FEB9D009AF21D /* Images.xcassets in Resources */,
@@ -207,13 +336,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1FBCE74B798111D590FC94C3 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Congestionator/Pods-Congestionator-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		75C5AEA6805C09A02D89EDF9 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		055A0A951A9FEB9D009AF21D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				055A0AA11A9FEB9D009AF21D /* ViewController.swift in Sources */,
+				055A0AE01A9FF00B009AF21D /* UIViewExtension.swift in Sources */,
+				055A0ACE1A9FEEFA009AF21D /* RestKitObjC.m in Sources */,
+				055A0AC01A9FEE1B009AF21D /* ViewController.swift in Sources */,
+				055A0ADB1A9FF00B009AF21D /* NetworkIndicator.swift in Sources */,
 				055A0A9F1A9FEB9D009AF21D /* AppDelegate.swift in Sources */,
+				055A0ACB1A9FEEFA009AF21D /* BaseService.swift in Sources */,
+				055A0AE81A9FF2C4009AF21D /* BaseModel.swift in Sources */,
+				055A0ACC1A9FEEFA009AF21D /* ContentService.swift in Sources */,
+				055A0ADE1A9FF00B009AF21D /* UIColorExtension.swift in Sources */,
+				055A0AE51A9FF2AD009AF21D /* CongestionLocation.swift in Sources */,
+				055A0ADD1A9FF00B009AF21D /* UIAppearanceConfigurator.swift in Sources */,
+				055A0ADF1A9FF00B009AF21D /* UIImageExtension.swift in Sources */,
+				055A0ACF1A9FEEFA009AF21D /* ServicesConstants.swift in Sources */,
+				055A0ADC1A9FF00B009AF21D /* NSDateExtension.swift in Sources */,
+				055A0AD91A9FF00B009AF21D /* Configuration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,21 +509,25 @@
 		};
 		055A0AB91A9FEB9D009AF21D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D77AEBF504F099482E37A17 /* Pods-Congestionator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Congestionator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = Congestionator/BridgingHeader.h;
 			};
 			name = Debug;
 		};
 		055A0ABA1A9FEB9D009AF21D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1C49415A7FC49FA3D5DD1AA /* Pods-Congestionator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Congestionator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = Congestionator/BridgingHeader.h;
 			};
 			name = Release;
 		};
@@ -405,6 +584,7 @@
 				055A0ABA1A9FEB9D009AF21D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		055A0ABB1A9FEB9D009AF21D /* Build configuration list for PBXNativeTarget "CongestionatorTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +593,7 @@
 				055A0ABD1A9FEB9D009AF21D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
